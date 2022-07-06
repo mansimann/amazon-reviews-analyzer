@@ -49,7 +49,7 @@ You also need to set up the following two environment variables:
 - TEXT_RAZOR_API_KEY: ***
 - GOOGLE_APPLICATION_CREDENTIALS: service-account-file.json
 
-For more info see, https://www.textrazor.com/signup and https://cloud.google.com/docs/authentication/production.
+See https://www.textrazor.com/signup & https://cloud.google.com/docs/authentication/production.
 
 ### How to create a binary runnable package
 
