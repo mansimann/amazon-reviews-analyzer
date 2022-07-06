@@ -21,23 +21,15 @@ This application parses customer review for adjectives, assesses sentiment, and 
 ## Implementation Details
 
 ### TextRazor NLP API
-This application communicates with the TextRazor NLP API to parse customer reviews for adjectives.
 
+This application communicates with the TextRazor API to parse for adjectives.
 More specifically, it uses TextRazor to extract Words (tokens) and get part of speech. 
-It then uses a HashMap<String, Integer> to store mention count for each adjective.
-
-To get a free API key, simply create an account with TextRazor (https://www.textrazor.com/signup).
+It then uses a HashMap<String, Integer> to store mention count for every adjective.
 
 ### Google Cloud NL API
 
 This application communicates with the Google Cloud NL API to assess sentiment.
-
 More specifically, it uses google.cloud.language.v1 package to get sentiment score and magnitude.
-Sentiment score, which is the overall emotion, is between -1.0 (negative) and 1.0 (positive).
-And sentiment magnitude, which is the overall strength of the emotion, is between 0.0 and +ing.
-
-To see how to authenticate an application as a service account and pass credentials manually, 
-visit https://cloud.google.com/docs/authentication/production.
 
 ## Installation
 
