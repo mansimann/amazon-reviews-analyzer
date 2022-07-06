@@ -16,9 +16,7 @@ public class Main {
    *
    * @param args command-line arguments
    */
-  public static void main(String[] args) throws Exception {
-
-  }
+  public static void main(String[] args) throws Exception {}
 
   /**
    * Parses the input for adjectives and counts the mentions.
@@ -75,6 +73,7 @@ public class Main {
 
   /**
    * Outputs an appropriate response.
+   *
    * @param input the product review submitted by customer
    * @return a String output response
    * @throws IOException if unable to create LanguageServiceClient using credentials
