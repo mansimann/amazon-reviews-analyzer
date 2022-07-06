@@ -29,7 +29,7 @@ It then uses a HashMap<String, Integer> to store mention count for every adjecti
 ### Google Cloud NL API
 
 This application communicates with the Google Cloud NL API to assess sentiment.
-More specifically, it uses google.cloud.language.v1 package to get sentiment score and magnitude.
+It uses google.cloud.language.v1 package to get sentiment score and magnitude.
 
 ## Installation
 
