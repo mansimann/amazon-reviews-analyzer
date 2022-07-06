@@ -35,6 +35,12 @@ It uses google.cloud.language.v1 package to get sentiment score and magnitude.
 
 ### How to compile the project
 
+You must first set up the following two environment variables:
+- TEXT_RAZOR_API_KEY: ***
+- GOOGLE_APPLICATION_CREDENTIALS: service-account-file.json
+
+For more info, see https://www.textrazor.com/signup & https://cloud.google.com/docs/authentication/production.
+
 We use Apache Maven to compile and run this project.
 
 You need to install Apache Maven (https://maven.apache.org/) on your system.
@@ -44,12 +50,6 @@ Type on the command line:
 ```bash
 mvn clean compile
 ```
-
-You also need to set up the following two environment variables:
-- TEXT_RAZOR_API_KEY: ***
-- GOOGLE_APPLICATION_CREDENTIALS: service-account-file.json
-
-See https://www.textrazor.com/signup & https://cloud.google.com/docs/authentication/production.
 
 ### How to create a binary runnable package
 
