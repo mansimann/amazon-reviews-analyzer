@@ -1,4 +1,4 @@
-# :speech_balloon: Customer Review Analysis
+# :star2: Customer Review Analysis
 
 ![Custom badge](https://img.shields.io/badge/build-passing-brightgreen)
 ![Custom badge](https://img.shields.io/badge/build%20tool-maven-brightgreen)
