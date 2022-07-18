@@ -1,6 +1,6 @@
 package service;
+
 /**
- * Name: Mansi Mann.
  * Description: This class contains the Main method.
  */
 public class Main {
