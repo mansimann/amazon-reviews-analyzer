@@ -1,51 +1,51 @@
-# :star2: Customer Review Analysis
+# :shopping_cart: Amazon Reviews Analyzer
 
 ![Custom badge](https://img.shields.io/badge/build-passing-brightgreen)
 ![Custom badge](https://img.shields.io/badge/build%20tool-maven-brightgreen)
 ![Custom badge](https://img.shields.io/badge/code%20analysis%20tools-spotbugs,%20checkstyle-orange)
 ![Custom badge](https://img.shields.io/badge/test%20framework-JUnit-blue)
 
-This application parses customer review for adjectives, assesses sentiment, and outputs an appropriate response. 
+This application scrapes a product’s Amazon reviews, extracts entities, and reveals sentiment.
 
 ## Contents
 
 - [Technologies](#technologies)
 - [Implementation details](#implementation-details)
-- [Installation](#pinstallation)
+- [Installation](#installation)
 
 ## Technologies
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 ![Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 
-## Implementation Details
+## Implementation details
+
+### jsoup
+
+This application uses the jsoup library to scrape and parse HTML from a URL 
+and extract product reviews using CSS selectors.
 
 ### TextRazor NLP API
 
-This application communicates with the TextRazor API to parse for adjectives.
-More specifically, it uses TextRazor to extract Words (tokens) and get part of speech. 
-It then uses a HashMap<String, Integer> to store mention count for every adjective.
+This application communicates with the TextRazor API to extract entities.
 
 ### Google Cloud NL API
 
-This application communicates with the Google Cloud NL API to assess sentiment.
-It uses google.cloud.language.v1 package to get sentiment score and magnitude.
+This application communicates with the Google Cloud NL API to detect sentiment score and magnitude.
 
 ## Installation
 
-### How to compile the project
+### First steps
 
-You must first set up the following two environment variables:
+After cloning the project, you must set up the following two environment variables:
 - TEXT_RAZOR_API_KEY: ***
 - GOOGLE_APPLICATION_CREDENTIALS: service-account-file.json
 
 For more info, see https://www.textrazor.com/signup & https://cloud.google.com/docs/authentication/production.
 
-We use Apache Maven to compile and run this project.
+You also may need to install Apache Maven (https://maven.apache.org/) on your system.
 
-You need to install Apache Maven (https://maven.apache.org/) on your system.
-
-Type on the command line:
+### How to compile the project
 
 ```bash
 mvn clean compile
@@ -60,18 +60,18 @@ mvn clean compile assembly:single
 ### How to run
 
 ```bash
-mvn -q clean compile exec:java -Dexec.executable="service.service.Main" 
+mvn -q clean compile exec:java -Dexec.executable="service.Main" 
 ```
 
-### Run all the unit test classes.
+### How to run all the unit test classes
 
 ```bash
 mvn clean compile test checkstyle:check  spotbugs:check
 ```
 
-### Using Spotbugs to find bugs in your project
+### How to run spotbugs 
 
-To see bug detail using the Findbugs GUI, use the following command "mvn findbugs:gui"
+To see bug details using the Findbugs GUI, use the following command "mvn findbugs:gui"
 
 Or you can create a XML report by using
 
@@ -89,32 +89,26 @@ mvn spotbugs:spotbugs
 mvn spotbugs:check 
 ```
 
-check goal runs analysis like spotbugs goal, and make the build failed if it found any bugs.
-
 For more info see
 https://spotbugs.readthedocs.io/en/latest/maven.html
 
-SpotBugs https://spotbugs.github.io/ is the spiritual successor of FindBugs.
 
-### Run Checkstyle
+### How to run checkstyle
 
 CheckStyle code styling configuration files are in config/ directory. Maven checkstyle plugin is set to use google code style.
-You can change it to other styles like sun checkstyle.
-
-To analyze this example using CheckStyle run
 
 ```bash
 mvn checkstyle:check
 ```
 
-This will generate a report in XML format
+Generate a report in XML format:
 
 ```bash
 target/checkstyle-checker.xml
 target/checkstyle-result.xml
 ```
 
-and the following command will generate a report in HTML format that you can open it using a Web browser.
+Generate a report in HTML format:
 
 ```bash
 mvn checkstyle:checkstyle

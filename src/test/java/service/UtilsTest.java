@@ -1,5 +1,6 @@
+package service;
+
 import com.textrazor.AnalysisException;
-import service.Utils;
 import org.junit.Test;
 
 import java.io.IOException;
