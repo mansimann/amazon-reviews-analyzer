@@ -60,7 +60,7 @@ mvn clean compile assembly:single
 ### How to run
 
 ```bash
-mvn -q clean compile exec:java -Dexec.executable="Main" 
+mvn -q clean compile exec:java -Dexec.executable="service.service.Main" 
 ```
 
 ### Run all the unit test classes.

@@ -40,6 +40,11 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.15.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -61,7 +66,7 @@
                     <includeProjectDependencies>true</includeProjectDependencies>
                     <includePluginDependencies>true</includePluginDependencies>
                     <killAfter>-1</killAfter>
-                    <mainClass>Main</mainClass>
+                    <mainClass>service.Main</mainClass>
                     <cleanupDaemonThreads>false</cleanupDaemonThreads>
                 </configuration>
             </plugin>
